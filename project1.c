@@ -45,7 +45,7 @@ pid_t my_fork(int execu){
 			exit(0);
 
 		default:	// parent process
-			wait(&status);
+			waitpid(PID, NULL, 0);
 			break;
 	}
 	return PID;
